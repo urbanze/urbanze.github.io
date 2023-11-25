@@ -36,5 +36,5 @@ Algums meses se passaram e com ajuda de um vizinho/amigo (Vitor) e sua CNC de co
 
 Este terceiro protótipo já conseguia fazer todas operações básicas da ideia inicial do projeto, mesmo que de forma relativamente precária. As engrenagens haviam bastante jogo (backlash, etc), os motores haviam pouquissima precisão e torque, já que eram pequenos, com pouca redução apenas para validar a ideia com o laser. O protótipo se mostrou funcional e conseguia mirar o laser para os objetos de forma visualmente satisfatória.
 
-![Laser](https://github.com/urbanze/urbanze.github.io/tree/main/images/telescope_laser.jpeg)
+![Laser](https://github.com/urbanze/urbanze.github.io/tree/main/images/telescope_laser.jpeg)\
 [Clique aqui](https://github.com/urbanze/urbanze.github.io/tree/main/videos/telescope_13072017.mp4) para visualizar o video do terceiro protótipo.
