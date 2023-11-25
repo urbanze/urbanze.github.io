@@ -25,7 +25,7 @@ Após semanas estudando o protocolo LX200 e como funcionaria para enviar os dado
 
 
 ### Segundo protótipo alpha (02/2017)
-Após um mês de desenvolvimento e melhorias, foi adicionado o motor do eixo Y (Alt) além de melhoria nas contas mas ainda sem sucesso em 100% das fórmulas, utilizando alguns valores fixos como a hora angulo para LST.
+Após um mês de desenvolvimento e melhorias, foi adicionado o motor do eixo Y (Alt) além de melhoria nas contas mas ainda sem sucesso em 100% das fórmulas, utilizando alguns valores fixos como a hora angulo para LST. A partir deste ponto, comecei a utilizar um laser verde bastante comum em astronomia no lugar do telescópio em si, pois é mais fácil para criar uma mecânica simples já que eu não tinha como criar sistemas grandes e robustos em casa.
 
 ![Second_alpha](https://github.com/urbanze/urbanze.github.io/tree/main/images/telescope_04022017.jpg)
 
