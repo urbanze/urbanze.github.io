@@ -9,7 +9,7 @@ Os projetos são apenas um desenvolvimento e desafio pessoal para melhorar minha
 
 
 # GoTo Telescope
-![GoTo](https://github.com/urbanze/urbanze.github.io/tree/main/images/gototelescope.jpg)
+![GoTo](images/gototelescope.jpg)
 ## O que é?
 Um GoTo Telescope é basicamente um telescópio automatizado que podemos colocar as coordenadas dos objetos celestes (estrelas, planetas, etc) para que o software, motores e afins apontem ao objeto desejado. Também é comum que esses sistemas façam tracking (acompanham) do objeto em tempo real.
 
@@ -22,13 +22,13 @@ Desde bem pequeno, sempre utilizei o software Stellarium para visualizar o céu 
 ### Primeiro protótipo alpha (01/2017)
 Após semanas estudando o protocolo LX200 e como funcionaria para enviar os dados ao ESP8266 (via TCP e/ou Serial), iniciei os testes utilizando um Arduino Mega para converter as coordenadas enviadas pelo Stellarium para um único motor de passo do eixo X (Az). As fórmulas necessárias para toda conversão das coordenadas em formato RA/DEC para Alt/Az foram um verdadeiro desáfio complexo de ser vencido onde continuei com algumas partes sem solução, como o cálculo da hora ângulo baseado em minha coordenada: Local Sideral Time (LST). Com essa pedra no caminho, acabava colocando alguns valores fixos no código apenas para que as contas pudessem ser terminadas.
 
-[Clique aqui](https://github.com/urbanze/urbanze.github.io/tree/main/videos/telescope_09012017.mp4) para visualizar o video do primeiro protótipo.
+[Clique aqui](/videos/telescope_09012017.mp4) para visualizar o video do primeiro protótipo.
 
 
 ### Segundo protótipo alpha (02/2017)
 Após um mês de desenvolvimento e melhorias, foi adicionado o motor do eixo Y (Alt) além de melhoria nas contas mas ainda sem sucesso em 100% das fórmulas, utilizando alguns valores fixos como a hora angulo para LST. A partir deste ponto, comecei a utilizar um laser verde bastante comum em astronomia no lugar do telescópio em si, pois é mais fácil para criar uma mecânica simples já que eu não tinha como criar sistemas grandes e robustos em casa.
 
-![Second_alpha](https://github.com/urbanze/urbanze.github.io/tree/main/images/telescope_04022017.jpg)
+![Second_alpha](images/telescope_04022017.jpg)
 
 
 ### Terceiro protótipo alpha (07/2017)
@@ -36,5 +36,5 @@ Algums meses se passaram e com ajuda de um vizinho/amigo (Vitor) e sua CNC de co
 
 Este terceiro protótipo já conseguia fazer todas operações básicas da ideia inicial do projeto, mesmo que de forma relativamente precária. As engrenagens haviam bastante jogo (backlash, etc), os motores haviam pouquissima precisão e torque, já que eram pequenos, com pouca redução apenas para validar a ideia com o laser. O protótipo se mostrou funcional e conseguia mirar o laser para os objetos de forma visualmente satisfatória.
 
-![Laser](https://github.com/urbanze/urbanze.github.io/tree/main/images/telescope_laser.jpeg)\
+![Laser](images/telescope_laser.jpeg)\
 [Clique aqui](https://github.com/urbanze/urbanze.github.io/tree/main/videos/telescope_13072017.mp4) para visualizar o video do terceiro protótipo.
