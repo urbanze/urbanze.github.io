@@ -19,6 +19,7 @@ A ideia de fazer esse projeto iniciou-se no fim do primeiro ano (2016) da minha 
 ## Controle
 Desde bem pequeno, sempre utilizei o software Stellarium para visualizar o céu e acabei pensando em utilizar as coordenadas que aparecem na tela para indicar ao software de controle dos motores onde deve ser apontado. Após algumas pesquisas iniciais, descobri que o Stellarium havia um plugin para controle de telescópio e decidi estudar sobre o funcionamento e como seria essa comunicação com o telescópio utilizando o protocolo padrão "LX200".
 
+## Primeira fase
 ### Primeiro protótipo alpha (01/2017)
 Após semanas estudando o protocolo LX200 e como funcionaria para enviar os dados ao ESP8266 (via TCP e/ou Serial), iniciei os testes utilizando um Arduino Mega para converter as coordenadas enviadas pelo Stellarium para um único motor de passo do eixo X (Az). As fórmulas necessárias para toda conversão das coordenadas em formato RA/DEC para Alt/Az foram um verdadeiro desáfio complexo de ser vencido onde continuei com algumas partes sem solução, como o cálculo da hora ângulo baseado em minha coordenada: Local Sideral Time (LST). Com essa pedra no caminho, acabava colocando alguns valores fixos no código apenas para que as contas pudessem ser terminadas.
 
@@ -38,3 +39,17 @@ Este terceiro protótipo já conseguia fazer todas operações básicas da ideia
 
 ![Laser](images/telescope_laser.jpeg)\
 [Clique aqui](https://github.com/urbanze/urbanze.github.io/tree/main/videos/telescope_13072017.mp4) para visualizar o video do terceiro protótipo.
+
+### Conclusão
+Com este protótipo funcional, que validou a ideia inicial, o próximo passo será portar todo o sistema mecânico para um que suporte um telescópio em tamanho real. No caso, meu telescópio atual é um Celestron 70mm.
+
+
+## Segunda fase
+Após inúmeras tentativas, ao longo de meses, de modelar um sistema mecânico em que seja possível acoplar vários tamanhos e formatos de telescópio, inclusive câmeras para astrofotografia, não obtive bons resultados durante a modelagem 3D (Tinkercad).
+
+Durante esses diversos testes estruturais, também desenvolvi um modelo 3D para o antigo projeto alpha com laser, onde tentei fazer minha primeira impressão 3D com a impressora de um amigo (Auro), porém, encontrei muitas dificuldades em fazer boas peças impressas, pois eu não entendia de todos detalhes relevantes para  uma boa impressão 3D. Segue a foto do modelo:
+
+![3Dmodel](images/telescope_01022021)
+![3Dmodel](images/telescope_01022021_2)
+
+### Impressora 3D
