@@ -9,6 +9,7 @@ Os projetos são apenas um desenvolvimento e desafio pessoal para melhorar minha
 
 
 # GoTo Telescope
+![GoTo](https://github.com/urbanze/urbanze.github.io/tree/main/images/gototelescope.jpg)
 ## O que é?
 Um GoTo Telescope é basicamente um telescópio automatizado que podemos colocar as coordenadas dos objetos celestes (estrelas, planetas, etc) para que o software, motores e afins apontem ao objeto desejado. Também é comum que esses sistemas façam tracking (acompanham) do objeto em tempo real.
 
@@ -31,6 +32,6 @@ Após um mês de desenvolvimento e melhorias, foi adicionado o motor do eixo Y (
 
 
 ### Terceiro protótipo alpha (07/2017)
-Algums meses se passaram e com ajuda de um vizinho/amigo (Vitor) e sua CNC de corta a laser, consegui montar um prototipo de MDF mais digno de ser apresentado e funcional, com uma caixa nova, engrenagens e até uma pequena PCB com o circuito já adicionado ao ESP8266. Nestes meses também foi desenvolvido um software em C# para controle do telescópio pelo computador via TCP com o ESP8266. Este software permitia além dos controles manuais, ainda havia a entrada para a variável da hora ângulo que até então ainda não consegui efetuar o cálculo dessa informação.
+Algums meses se passaram e com ajuda de um vizinho/amigo (Vitor) e sua CNC de corte a laser, consegui montar um prototipo de MDF mais digno de ser apresentado e funcional, com uma caixa nova, engrenagens e até uma pequena PCB com o circuito já adicionado ao ESP8266. Nestes meses também foi desenvolvido um software em C# para controle do telescópio pelo computador via TCP com o ESP8266. Este software permitia além dos controles manuais, ainda havia a entrada para a variável da hora ângulo que até então ainda não consegui efetuar o cálculo dessa informação.
 
 [Clique aqui](https://github.com/urbanze/urbanze.github.io/tree/main/videos/telescope_13072017.mp4) para visualizar o video do terceiro protótipo.
