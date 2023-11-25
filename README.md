@@ -49,7 +49,7 @@ Após inúmeras tentativas, ao longo de meses, de modelar um sistema mecânico e
 
 Durante esses diversos testes estruturais, também desenvolvi um modelo 3D para o antigo projeto alpha com laser, onde tentei fazer minha primeira impressão 3D com a impressora de um amigo (Auro), porém, encontrei muitas dificuldades em fazer boas peças impressas, pois eu não entendia de todos detalhes relevantes para  uma boa impressão 3D. Segue a foto do modelo:
 
-![3Dmodel](images/telescope_01022021)
-![3Dmodel](images/telescope_01022021_2)
+![3Dmodel](images/telescope_01022021.png)
+![3Dmodel](images/telescope_01022021_2.png)
 
 ### Impressora 3D
