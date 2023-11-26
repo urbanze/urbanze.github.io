@@ -19,7 +19,7 @@ A ideia de fazer esse projeto iniciou-se no fim do primeiro ano (2016) da minha 
 ## Controle
 Desde bem pequeno, sempre utilizei o software Stellarium para visualizar o céu e acabei pensando em utilizar as coordenadas que aparecem na tela para indicar ao software de controle dos motores onde deve ser apontado. Após algumas pesquisas iniciais, descobri que o Stellarium havia um plugin para controle de telescópio e decidi estudar sobre o funcionamento e como seria essa comunicação com o telescópio utilizando o protocolo padrão "LX200".
 
-## Primeira fase
+## Primeira fase (2017)
 ### Primeiro protótipo alpha (01/2017)
 Após semanas estudando o protocolo LX200 e como funcionaria para enviar os dados ao ESP8266 (via TCP e/ou Serial), iniciei os testes utilizando um Arduino Mega para converter as coordenadas enviadas pelo Stellarium para um único motor de passo do eixo X (Az). As fórmulas necessárias para toda conversão das coordenadas em formato RA/DEC para Alt/Az foram um verdadeiro desáfio complexo de ser vencido onde continuei com algumas partes sem solução, como o cálculo da hora ângulo baseado em minha coordenada: Local Sideral Time (LST). Com essa pedra no caminho, acabava colocando alguns valores fixos no código apenas para que as contas pudessem ser terminadas.
 
@@ -37,19 +37,33 @@ Algums meses se passaram e com ajuda de um vizinho/amigo (Vitor) e sua CNC de co
 
 Este terceiro protótipo já conseguia fazer todas operações básicas da ideia inicial do projeto, mesmo que de forma relativamente precária. As engrenagens haviam bastante jogo (backlash, etc), os motores haviam pouquissima precisão e torque, já que eram pequenos, com pouca redução apenas para validar a ideia com o laser. O protótipo se mostrou funcional e conseguia mirar o laser para os objetos de forma visualmente satisfatória.
 
-![Laser](images/telescope_laser.jpeg)\
 [Clique aqui](https://github.com/urbanze/urbanze.github.io/tree/main/videos/telescope_13072017.mp4) para visualizar o video do terceiro protótipo.
+![Projeto](images/telescope_13072017.png)
+![Projeto](images/telescope_13072017_app.png)
+![Laser](images/telescope_laser.jpeg)
 
 ### Conclusão
 Com este protótipo funcional, que validou a ideia inicial, o próximo passo será portar todo o sistema mecânico para um que suporte um telescópio em tamanho real. No caso, meu telescópio atual é um Celestron 70mm.
 
 
-## Segunda fase
-Após inúmeras tentativas, ao longo de meses, de modelar um sistema mecânico em que seja possível acoplar vários tamanhos e formatos de telescópio, inclusive câmeras para astrofotografia, não obtive bons resultados durante a modelagem 3D (Tinkercad).
+## Segunda fase (2021)
+A segunda fase iniciou-se após alguns anos com o projeto parado, esta fase seria resposável por criar um mecânismo que consiga suportar o acoplamento de telescópios e, consequentemente, que contenha uma altíssima precisão e resolução para que mesmo com telescópios maiores (Ex: 8") consiga utilizar o mesmo sistema GoTo, então precisa ser muito bem feito, modelado e pensado!
+
+Após inúmeras tentativas, ao longo de meses, de modelar um sistema mecânico em que seja possível acoplar vários tamanhos e formatos de telescópios, inclusive câmeras para astrofotografia, não obtive bons resultados durante a modelagem 3D (Tinkercad). A ideia por trás de fazer a mecânica para diversos tamanhos e tipos de telescópios é, para no futuro com o sucesso do projeto, comprar um telescópio de 8" para acopla-lo em meu sistema GoTo.
 
 Durante esses diversos testes estruturais, também desenvolvi um modelo 3D para o antigo projeto alpha com laser, onde tentei fazer minha primeira impressão 3D com a impressora de um amigo (Auro), porém, encontrei muitas dificuldades em fazer boas peças impressas, pois eu não entendia de todos detalhes relevantes para  uma boa impressão 3D. Segue a foto do modelo:
 
 ![3Dmodel](images/telescope_01022021.png)
 ![3Dmodel](images/telescope_01022021_2.png)
 
-### Impressora 3D
+Durante meses tentei esquematizar a mecânica sem muito sucesso e encontrar meios de garantir a precisão do sistema por completo, onde acabei decidindo que aplicaria encoders absolutos diretamente no eixo X/Y do sistema, uma vez que isso me garantiria alta precisão independente da qualidade das engrenagens, backlash e afins. Diversas pesquisas na internet não me mostraram encoders absolutos com alta resolução e nem mesmo com preço baixo, então o projeto continua andando bem devagar.
+
+Depois de quebrar muito a cabeça tentando "inventar" um sistema mecânico que suporte o telescópio completamente sozinho e não obter sucesso, visto que tenho pouquissimos conhecimentos em mecânica, decidi finalmente me inspirar com alguns sistemas que já existem no mundo, onde a melhor escolha pro meu sistema com suporte para multiplos telescópios será um Pan-Tilt convencional, muito utilizado em câmeras. A estrutura do Pan-Tilt é versátil pois além de movimentar ambos eixos, contém uma chapa lisa no topo, onde pode ser acoplado qualquer objeto, desde câmeras até telescópios ou lasers! A partir deste momento, meu sistema estava decidido em se tornar um Pan-Tilt, mas ainda há o problema em como montar um específico para meu projeto, que seja possível acoplar os motores de passo e encoders.
+
+![PanTilt](images/pantilt.png)
+
+
+### Impressora 3D (12/2022)
+Após meses tentando decifrar como montaria o pan-tilt em casa de forma barata e precisa, desisti das ideias de utilizar empresas tercerizadas para cortar MDF (como no projeto alpha) e acrílico, pois o tanto de peças e testes que eu precisaria fazer para validar todo o sistema ficaria muito caro e inviável. Após muitas pesquisas, decidi comprar uma impressora 3D para confeccionar o GoTo por completo e também todos meus outros futuros projetos, como um drone/aeromodelo. Com uma impressora inteiramente a minha disposição, poderia fazer milhares de testes quando houver necessidade de forma barata e com bastante precisão. Foi uma aquisição de extrema importância.\
+
+Com a impressora 3D em mãos, iniciei o desenvolvimento do modelo 3D do pan-tilt e também das engrenagens que seriam acopladas nos motores para aumentar precisão.
