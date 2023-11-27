@@ -123,7 +123,10 @@ Com tudo encaixado, parti para criação da alma do projeto, o software. Este so
 
 O software será construído em Node.JS pois é uma linguagem que adoro programar nos tempos livres (fácil, rápida e versátil). Todas comunicação com Stellarium, página web, controle dos motores, conversões matemáticas e afins ficarão gerenciadas pelo meu software em Node.JS, que farei tudo do mais absoluto zero. Por enquanto o software será responsável pela movimentação relativa e absoluta baseada nos encoders e também comunicação com o Stellarium.
 
+![webpage](images/webpage.png)
+
 Uma das partes mais legais de comunicar-se com o Stellarium tendo um Encoder, é que qualquer movimento é espelhado no icone de telescópio que é criado no Stellarium quando conecta-se em um. Isso funciona de forma incrível, pois ao habilitar o modo "telescópio (ocular view)" é possível ter a visão "identica" de como e para onde o telescópio está apontando, sem necessáriamente precisar do hardware em si. Isso facilita muito os testes e é legal de ver o feedback em ação.
+
 
 ### Primeiros testes
 Finalmente anos depois da ideia inicial de colocar o telescópio para seguir estrelas, pode ser finalmente testada na prática. Primeiramente é preciso validar todo o controle relativo e absoluto dos motores juntamente com os encoders, já que virou um sistema fechado de alimentação (retroalimentação, feedback). Após isso é necessário confirmar se a comunicação com o Stellarium e todas conversões de RA/DEC para Alt/Az estão corretas e chegando até os motores.
@@ -151,6 +154,7 @@ Neste momento consegui coletar muitas informações importantes e valiosas ao pr
 ### Pan-Tilt v2 (02/2023)
 Após esse primeiro sistema (v1) me mostrar que a ideia toda do projeto é válida e posso prosseguir em aperfeiçoar (milhões) de coisas, começei a pensar na solução de algum dos problemas citados anteriormente. Refiz a base do eixo X anterior que antes era apenas um cubo que alocava o encoder para uma espécie de "copo" que contém o motor e encoder X dentro de si. Também passei o motor Y que antes estava para fora do sistema para dentro, já que o motor X não ocupava mais este espaço. Também refiz boa parte dos encaixes para que caso alguma peça quebre (como aconteceu), possa facilmente imprimir uma nova e substituir. O primeiro projeto era quase tudo colado e ficava dificil/impossível manutenção. Então refiz todos encaixes com parafusos.
 
+![Pantiltv2](images/pantilt_v2.png)
 ![Telescopev2](images/telescope_v2_20230206.jpg)
 ![Telescopev2_2](images/telescope_v2_20230208.jpg)
 
