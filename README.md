@@ -73,6 +73,13 @@ Após meses tentando decifrar como montaria o pan-tilt em casa de forma barata e
 Com a impressora 3D em mãos, iniciei o desenvolvimento do modelo 3D do pan-tilt e também das engrenagens que seriam acopladas nos motores para aumentar precisão.
 
 
+### Encoder absoluto
+Depois de muitas pesquisas na internet, encontrei um encoder absoluto com alta resolução (18b) e preço muito baixo e super pequeno que iria viabilizar todo o novo projeto. Com esse carinha, conseguiria por em pratica todos novos e futuros objetivos. Com esse incrível encoder em mãos, teria certeza de que, independente dos motores e engrenagens perderem passos, alguem bater o braço ou até mesmo vento modificar a posição do telescópio, conseguiria saber a posição exata do sistema e efetuar correções para retornar na posição desejada. Sem esses encoders e depender unicamente dos motores e dezenas de engrenagens para saber a posição seria um desafio chato de ser vencido. Os encoders permitiram o projeto vingar!
+
+Para que o sistema tenha exatidão na informação do encoder, obviamente eu não poderia colocar em qualquer lugar e muito menos conectado via engrenagens. Precisaria acopla-lo diretamente nos eixos do sistema para que qualquer pequeno movimento, mesmo que imperceptível aos olhos, seja detectado pelo encoder. Se utilizasse o encoder conectado com engrenagens teria o problema de folga entre os dentes e não poderia ter tanta certeza da posição correta onde o telescópio esta apontando.
+
+![Encoder](images/encoder_20230110.jpg)
+
 ### Motores e engrenagens
 Agora que a brincadeira está mais séria, visto que preciso acoplar um telescópio de verdade e há necessidade de altissima resolução/precisão, nada mais justo que adicionar motores de passo Nema 17 com uma grande redução física para aumentar a resolução. Após uma longa análise de quais tipos de engrenagens ficariam boas, fáceis de montar e compactas, decidi optar pelas engrenagens planetárias que conseguem oferecer alta redução em pequeno espaço. Como criar conjunto de engrenagens que funcionem muito bem ainda é um desafio relativamente complexo para minhas skills de modelagem 3D, preferi encontrar algum modelo já pronto pela internet. Acabei encontrando uma planetária modular perfeita pro meu caso, que pode ser acoplada diretamente no eixo do motor, ficando compacto e até que bonito hehe. [Clique aqui](https://www.thingiverse.com/thing:2586962) para acessar o link do modelo.
 
@@ -83,3 +90,20 @@ Após algumas contas, cheguei a conclusão que uma redução de 256x seria a mel
 ![3dgear3](images/3dgear_20221229.jpg)
 ![3dgear4](images/3dgear_20230102.jpg)
 
+Para controlar os motores, escolhi o driver A4988 que oferece uma interface de controle via GPIO e pulsos. Utilizei uma PCB universal para soldar todos componentes de controle do motor. Após acoplar as engrenagens nos motores e fazer alguns testes, cheguei em algumas conclusões:
+ - Funcionou para meu propósito que era aumentar a resolução do sistema, permitindo um controle mais fino ao telescópio.
+ - Validou a ideia de ser compacto e ainda funcional.
+ - Por causa da imperfeição da impressora 3D e tantas engrenagens, o conjunto de engrenagens faz um barulho relativamente alto e o conjunto inteiro se movimentava bem pouco conforme girava. Isso acontece provavelmente pois em alguns angulos, as engrenagens internas estarão mais para um lado forçando todo o conjunto mais para o lado e gerando enorme atrito. Após muitas horas de testes, notava também que a engrenagem acoplada no eixo do nema também ficou bem desgastada por causa do excesso de atrito e imperfeições (mesmo com uma generosa lubrificação).
+
+![3dgear4](images/nema_gear_20230104.jpg)
+
+
+### Pan-Tilt
+Agora com os motores prontos para pleno funcionamento, é hora de partir ao modelo 3D do pan-tilt. Desenvolver esse modelo para que esteja tudo o mais perfeitamente correto, com o mínimo de erros e imperfeições será um desafio interessante, pois será meu primeiro modelo 3D "complexo" onde tudo precisa se encaixar com harmonia e exatidão. Levei algumas semanas para desenvolver toda a estrutura que deveria suportar os motores e ainda incluir os encoders diretamente nos eixos X/Y.
+
+![pantilt0](images/pantilt_3d.png)
+![pantilt1](images/pantilt_20230106.jpg)
+![pantilt2](images/pantilt_20230109.jpg)
+![pantilt3](images/pantilt_20230109_2.jpg)
+![pantilt4](images/pantilt_20230110.jpg)
+![pantilt5](images/pantilt_20230110_2.jpg)
