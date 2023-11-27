@@ -20,10 +20,12 @@ A ideia de fazer esse projeto iniciou-se no fim do primeiro ano (2016) da minha 
 Desde bem pequeno, sempre utilizei o software Stellarium para visualizar o céu e acabei pensando em utilizar as coordenadas que aparecem na tela para indicar ao software de controle dos motores onde deve ser apontado. Após algumas pesquisas iniciais, descobri que o Stellarium havia um plugin para controle de telescópio e decidi estudar sobre o funcionamento e como seria essa comunicação com o telescópio utilizando o protocolo padrão "LX200".
 
 ## Primeira fase (2017)
-Vale ficar bem claro que foi neste periodo, onde comecei a se interessar pela área de sistemas embarcados, programação e afins. Para qualquer coisa em que eu olhava era necessário estudar (muito!) para entender e conseguir aplicar. Tudo era novo e complicado para aprender, pois eu estava começando a faculdade e ainda não tinha nenhuma experiência profissional. Esse projeto que juntou um antigo hobby (astronomia) com um novo (sistemas embarcados) foi muito importante para minha vida profissional, onde consegui dar sentido aos estudos até chegar em um objetivo final (concluir o projeto) e por ser um projeto complexo, me abriu muitos caminhos com o tanto de conhecimento diversificado que precisei aprender para finaliza-lo.
+Vale ficar claro que foi neste periodo, onde comecei a se interessar pela área de sistemas embarcados, programação e afins. Para qualquer coisa em que eu olhava era necessário estudar (muito!) para entender e conseguir aplicar. Tudo era novo e complicado para aprender, pois eu estava começando a faculdade e ainda não tinha nenhuma experiência profissional. Esse projeto que juntou um antigo hobby (astronomia) com um novo (sistemas embarcados) foi muito importante para minha vida profissional, onde consegui dar sentido aos estudos até chegar em um objetivo final (concluir o projeto) e por ser um projeto complexo, me abriu muitos caminhos com o tanto de conhecimento diversificado que precisei aprender para finaliza-lo.
 
 ### Primeiro protótipo alpha (01/2017)
 Após semanas estudando o protocolo LX200 e como funcionaria para enviar os dados ao ESP8266 (via TCP e/ou Serial), iniciei os testes utilizando um Arduino Mega para converter as coordenadas enviadas pelo Stellarium para um único motor de passo do eixo X (Az). As fórmulas necessárias para toda conversão das coordenadas em formato RA/DEC para Alt/Az foram um verdadeiro desáfio complexo de ser vencido onde continuei com algumas partes sem solução, como o cálculo da hora ângulo baseado em minha coordenada: Local Sideral Time (LST). Com essa pedra no caminho, acabava colocando alguns valores fixos no código apenas para que as contas pudessem ser terminadas.
+
+Os motores de passo escolhidos nesta etapa são os pequenos e baratos 28BYJ-48, vendidos em quase qualquer kit de Arduino. Já contam com uma redução interna e conseguem fazer um bom trabalho para os testes iniciais.
 
 [Clique aqui](/videos/telescope_09012017.mp4) para visualizar o video do primeiro protótipo.
 
@@ -53,7 +55,7 @@ A segunda fase iniciou-se após alguns anos com o projeto parado, esta fase seri
 
 Após inúmeras tentativas, ao longo de meses, de modelar um sistema mecânico em que seja possível acoplar vários tamanhos e formatos de telescópios, inclusive câmeras para astrofotografia, não obtive bons resultados durante a modelagem 3D (Tinkercad). A ideia por trás de fazer a mecânica para diversos tamanhos e tipos de telescópios é, para no futuro com o sucesso do projeto, comprar um telescópio de 8" para acopla-lo em meu sistema GoTo.
 
-Durante esses diversos testes estruturais, também desenvolvi um modelo 3D para o antigo projeto alpha com laser, onde tentei fazer minha primeira impressão 3D com a impressora de um amigo (Auro), porém, encontrei muitas dificuldades em fazer boas peças impressas, pois eu não entendia de todos detalhes relevantes para  uma boa impressão 3D. Segue a foto do modelo:
+Com esses diversos testes estruturais, também desenvolvi um modelo 3D para o antigo projeto alpha com laser, onde tentei fazer minha primeira impressão 3D com a impressora de um amigo (Auro), porém, encontrei muitas dificuldades em fazer boas peças impressas, pois eu não entendia de todos detalhes relevantes para  uma boa impressão 3D. Segue a foto do modelo:
 
 ![3Dmodel](images/telescope_01022021.png)
 ![3Dmodel](images/telescope_01022021_2.png)
@@ -66,6 +68,18 @@ Depois de quebrar muito a cabeça tentando "inventar" um sistema mecânico que s
 
 
 ### Impressora 3D (12/2022)
-Após meses tentando decifrar como montaria o pan-tilt em casa de forma barata e precisa, desisti das ideias de utilizar empresas tercerizadas para cortar MDF (como no projeto alpha) e acrílico, pois o tanto de peças e testes que eu precisaria fazer para validar todo o sistema ficaria muito caro e inviável. Após muitas pesquisas, decidi comprar uma impressora 3D para confeccionar o GoTo por completo e também todos meus outros futuros projetos, como um drone/aeromodelo. Com uma impressora inteiramente a minha disposição, poderia fazer milhares de testes quando houver necessidade de forma barata e com bastante precisão. Foi uma aquisição de extrema importância.\
+Após meses tentando decifrar como montaria o pan-tilt em casa de forma barata e precisa, desisti das ideias de utilizar empresas tercerizadas para cortar MDF (como no projeto alpha) e acrílico, pois o tanto de peças e testes que eu precisaria fazer para validar todo o sistema ficaria muito caro e inviável. Após muitas pesquisas, decidi comprar uma impressora 3D para confeccionar o GoTo por completo e também todos meus outros futuros projetos, como um drone/aeromodelo. Com uma impressora inteiramente a minha disposição, poderia fazer milhares de testes quando houver necessidade de forma barata e com bastante precisão. Foi uma aquisição de extrema importância.
 
 Com a impressora 3D em mãos, iniciei o desenvolvimento do modelo 3D do pan-tilt e também das engrenagens que seriam acopladas nos motores para aumentar precisão.
+
+
+### Motores e engrenagens
+Agora que a brincadeira está mais séria, visto que preciso acoplar um telescópio de verdade e há necessidade de altissima resolução/precisão, nada mais justo que adicionar motores de passo Nema 17 com uma grande redução física para aumentar a resolução. Após uma longa análise de quais tipos de engrenagens ficariam boas, fáceis de montar e compactas, decidi optar pelas engrenagens planetárias que conseguem oferecer alta redução em pequeno espaço. Como criar conjunto de engrenagens que funcionem muito bem ainda é um desafio relativamente complexo para minhas skills de modelagem 3D, preferi encontrar algum modelo já pronto pela internet. Acabei encontrando uma planetária modular perfeita pro meu caso, que pode ser acoplada diretamente no eixo do motor, ficando compacto e até que bonito hehe. [Clique aqui](https://www.thingiverse.com/thing:2586962) para acessar o link do modelo.
+
+Após algumas contas, cheguei a conclusão que uma redução de 256x seria a melhor escolha para manter uma boa velocidade e ainda boa precisão, visto que poderia aumentar a resolução via micropasso quando necessário. Mãos na massa então!
+
+![3dgear1](images/3dgear_20221226.jpg)
+![3dgear2](images/3dgear_20221228.jpg)
+![3dgear3](images/3dgear_20221229.jpg)
+![3dgear4](images/3dgear_20230102.jpg)
+
